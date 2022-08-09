@@ -14,3 +14,13 @@ def f_mod(a,b): #utilizamos una función definida como "f_mod" y las variables a
 assert f_mod(3,5) #el assert se utliza como metodo de validacion y asignacion de los valores a las variables
 assert f_mod(3,-5)
 assert f_mod(4,10)
+
+
+#PUNTO 3
+def f_str_01(str_01): #utilizamos una función definida como "f_str_01" y las variables "str_01"
+  str_02=(str_01)  #aqui intente definir str_02 con el str_01 a ver si lograba imprimir el "hola mundo por separado y solo colocando la mayuscula al MUNDO pero no se logro  
+  print(str_01.split())
+  print(str_02.upper())
+  return(str_02)
+  return(str_01)
+assert f_str_01('Hola Mundo')
