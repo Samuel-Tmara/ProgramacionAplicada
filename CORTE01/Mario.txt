@@ -1,3 +1,6 @@
+'''
+código para el ejercicio trabajado en clase.
+'''
 def f_imprimirpiramide (num):
     '''
     Función para imprir a escalera
