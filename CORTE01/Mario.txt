@@ -1,0 +1,53 @@
+def f_imprimirpiramide (num):
+    '''
+    Función para imprir a escalera
+    :param num: numero de columnas que debe tener la escalera.
+    :return: cadena de caracteres con el número de bloques correspondientes a la fila. 
+    '''
+    str_block = ''
+    for j in range (num+1):
+            str_block = str_block + '#'
+        # imprir el espacio entre bloques
+    return str_block
+
+
+def mario(Num = 3):
+# imprimr el número de lineas necesarias
+    for i in range (Num):
+        # incia la candea de caracteres a imprimir
+        str_block = ''
+        #print (i)
+        '''
+       inprimiendo una priamide invertida 
+       00000
+       0000
+       000
+       00
+       0
+        '''
+        for j in range (Num-i):
+            str_block = str_block + ' '
+        '''
+        imprimiendo una piramide
+        # 
+        ##
+        ###
+        ####
+        #####
+        '''
+        temp = f_imprimirpiramide (i+1)
+        str_block = str_block+temp
+        str_block = str_block + ' '
+        '''
+        imprimiendo una piramide
+        # 
+        ##
+        ###
+        ####
+        #####
+        '''
+        temp = f_imprimirpiramide (i+1)
+        str_block = str_block+temp
+        print (str_block)
+
+mario(6)
