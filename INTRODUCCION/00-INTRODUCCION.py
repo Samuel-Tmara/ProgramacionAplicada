@@ -87,11 +87,9 @@ así como enunciar erramientas de gran utilidad.
 - Programación orientada a objetos 
 - Presentación de información (Graficas y manejo de datos)
 En cuanto a la metodología de evaluación se tendran 5 actividades 
-1. examen practico (10%)
-2. examen teorico (10%)
-3. taller (15%)
-4. Quiz (5%)
-5. proyecto Final (60%)
+1. examen practico (40%)
+2. Quiz (10%)
+3. proyecto Final (50%)
 con Exepción del taller todas estas actividades se realizarán de manera INDIVIDUAL 
 adicionalmente contarán con tareas las cuales deben realizar pero no serán calificables. 
 '''
@@ -100,7 +98,7 @@ adicionalmente contarán con tareas las cuales deben realizar pero no serán cal
 Juan Felipe Nieto 
 Magister en Ingeniería biomédica de la universidad de los andes 
 correo: jnieto@usbbog.edu.co
-Horario de tutorias: 
+Horario de tutorias: JUEVES 1:00 - 3:00 PM
 Para las tutorias: antes de asistir enviar un correo con el tema que se tratará durante la tutoría, y asistir en 
     en el horario a la sala de profesores de ingeniería mecatrónica.
 '''
