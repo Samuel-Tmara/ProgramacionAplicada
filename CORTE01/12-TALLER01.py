@@ -11,7 +11,6 @@ l_paises = ['Colombia','Mexico','Turquía','Polonia','serbia','dinamarca','holad
 #       el archivo se ecuentra en formato csv
 ## 2. Lectura de archivos (1.0)
 #TODO: escriba un programa que le permita leer e imprimir el archivo generado anteriormente
-
 ## 3. números binario (1.5)
 def f_calBin (s_num):
     '''
@@ -39,7 +38,7 @@ def f_stat (l_valores):
     :param l_valores: lista con los valores a utilizar
     :return:
     '''
-    s_mean, s_median, s_STD = 0,0,0
+    s_mean, s_median, s_mode = 0,0,0
     #TODO: realizar las modificaciones necesarias a partir de esta sección
     return s_mean,s_median,s_STD
 
