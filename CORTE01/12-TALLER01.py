@@ -40,7 +40,7 @@ def f_stat (l_valores):
     '''
     s_mean, s_median, s_mode = 0,0,0
     #TODO: realizar las modificaciones necesarias a partir de esta sección
-    return s_mean,s_median,s_STD
+    return s_mean,s_median,s_mode
 
 ## 5. BONO (0.5)
 #TODO: realizar la verificación del punto aterior haciendo uso de la función assert (pytest)
