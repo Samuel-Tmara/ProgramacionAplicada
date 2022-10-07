@@ -1,91 +1,90 @@
-#TRABAJAMOS JUAN LOZANO , ALEJANDRA LEITON , ALBERT MUÑOZ , JUAN PANADERO , KENNETH GUZMAN , SAMUEL TÁMARA
-class persona():
-    pass  # class establece a las personas como un objeto
-    def init(self, Hermanos, Padres):  # definimos el objeto ya creado y establecemos sus parametros
-        self.nombre=[]  # Nombre de la persona
-        self.Hermanos = []  # hermanos de la persona (n datos)
-        self.Padres = []  # padres de la persona (2 datos o menos)
+#TALLER 02 #Trabajamos... juan jose lozano tovar , mauricio mora , kenet josep , alejandra leython , samuel tamara,juan panadero
+class persona (): #se define clase
+    def __init__(self,Hermanos,Padres,nombre):
+        self.nombre=nombre #nombre
+        self.Hermanos =Hermanos.split()# hermanos de la persona (n datos)
+        self.Padres=Padres.split() # padres de la persona (2 datos o menos)
+        self.bro=str(self.Hermanos)
+        self.father=str(self.Padres)
 
-    def add_siblings(self, Hermanos):  # TODO: verificar y asegurar que los hermanos tengan los mismos padres (0.5)
-        self.Hermanos.append(Hermanos)
 
-    def add_parents(self, Padres):
+    def add_siblings (self,sib):  
+        self.Hermanos.append(sib)
+        self.Hermanos.append(sib)
+        print(sib)
+
+    def add_parents (self,Padres):
         if len(self.Padres) < 2:
             self.Padres.append(Padres)
         else:
-            print('No se puede agregar')
+            print('No se puede meter')
 
-    def search(self, nombre):
-        i = 0
-        while i < len(self.Hermanos):
-            if nombre == self.Hermanos[i]:
-                print(f"{nombre} es hermano")
-                break
-            else:
-                i += 1
-        j = 0
-        while j < len(self.Padres):
-            if nombre == self.Padres[i]:
-                print(f"{nombre} es un padre")
-                break
-            else:
-                j += 1
 
-    def tree2dict(self):
-        '''
-        convierte el arbol actual en un diccionario usando los nombres como llaves y los padres y hermanos como llaves
-        :return: retorna un diccionario
-        '''
-        # TODO: Implementar una función que permita convertir el arbol actual en un diccionario (1.0)
 
-        arbol = persona()
+    def search (self,nombre):
+        art2=nombre.split()
+        key=[]
+        for i in art2:
+            k=i.lower()
+            key.append(k)
+        self.n=key
+        for j in key:
+            bareto=j.capitalize()
+            self.n=bareto
+        H=0
+        if self.nombre==self.n:
+            return (self.n,"esta en la altura",H)
+        for tre in self.Hermanos:
+            if tre==self.n:
+                H+=2
+                return (self.n,"esta en la altura",H)
 
-        def diccionario(self, nombre):
-            self.nombre = nombre
+        for albareto in self.Padres:
+            if albareto==self.n:
+                H+=1
+                return (self.n,"esta en la altura",H)
 
-        def str(self):
-            txt = "persona {0}"
-            return txt.format(self.nombre)
 
-    def encript(self, nombre):  # definimos la base de la encriptacion
-        abcdario = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t",
-                    "u", "v", "w", "x", "y",
-                    "z"]  # integramos una lista de letras que contaran estos mismos para la enriptacion
-        str_msg = ""
-        s_key = 3  # Establecemos la llave dentro de la encrpitacion que en este caso es "3"
-        for letra in nombre:  # creamos un bucle para las letras y nombres dentro de la definicion
-            if letra in abcdario:
-                indice_actual = abcdario.index(letra)
-                indice = indice_actual + s_key
-            if indice > 26:
-                indice -= 26
-                str_msg += abcdario[indice]  # la variable guardada se suma con las letras dentro del abecedario
-        else:
-            str_msg += letra
-            return str_msg, s_key  # retornamos el bucle para la llave y la variable guardada
-            # TODO: Implementar una función que permita converti el arbol en un archivo encriptado (1.0)
 
-    def decrip(self, nombre):
-        abcdario = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t",
-                    "u", "v", "w", "x", "y",
-                    "z"]  # integramos una lista como terminos que se contaran para la descriptacion
-        nombre = ''
-        for letra in abcdario:
-            if letra.isdigit():
-                nombre += abcdario[int(letra)]
-        else:
-            nombre += letra
-        return (nombre)
+    def tr2_list (self):
+        L=[]
+        T=self
+        T.Hermanos=[]
+        T.Padres=[]
+        L.append(T)
+        L.append(self.Hermanos)
+        LPO=self.tr2_list(self.Padres[0])
+        LP1=self.tr2_list(self.Padres[0])
+        L.append(LPO)
+        L.append(LP1)
+        return L
 
-gustav = persona("Hermanos","padres")  # en este punto integraremos los objetos que iran en el arbol como los hujos y los padres
-gustav.add_siblings("Manuel")  # Hijo dentro del arbol
-gustav.add_siblings("Sofia")  # Hija dentro del arbol
-gustav.add_siblings("Luciana")  # Hija dentro del arbol
-gustav.add_siblings("Valentino")  # Hijo dentro del arbol
-gustav.add_parents("Lamar")  # padre dentro del arbol
-gustav.add_parents("Demi")  # madre dentro del arbol
-juan = persona("Hermanos", "Padres")
-gustav.search("Luciana")
-print(gustav.Hermanos, gustav.Padres)
-print(encript(Sofia))  # Imprimiremos la encriptacion del arbol teniendo en cuenta la lista puesta antes
-print(decript(nombre))  # Imprimiremos la desencriptacion del arbol teniendo en cuenta la lista puesta antes
+    def encript(self,nombre):
+        self.nombrsearch=nombre
+        loli=self.nombrsearch+'.txt'
+        print(loli)
+        with open(loli,'a') as file:
+            file.write('\n'+self.nombre)
+            file.write('\n'+self.bro)
+            file.write('\n'+self.father)
+
+    def decrip(self,nombre):
+        self.nombrsearch=nombre
+        loli=self.nombrearch+'.txt'
+        archivo=open(loli,'rt',encoding='utf-8')
+        print(archivo.read())
+        return('Arbol created')
+
+gustav = persona("Hermanos","Padres","nombre")
+gustav.add_siblings("juan")
+gustav.add_siblings("pablo")
+gustav.add_siblings("pedro")
+gustav.add_siblings("jose")
+gustav.add_parents("jaime")
+gustav.add_parents("luisa")
+juan = persona("Hermanos","Padres","nombre")
+gustav.search("juan")
+print(gustav.Hermanos,gustav.Padres)
+
+
+
